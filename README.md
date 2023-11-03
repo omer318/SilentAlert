@@ -23,9 +23,9 @@ Perfect for helping hearing disabled people stay informed.
 * Download the repo.
 * With your favorite terminal, cd into the projects directory.
 * Install all of the requirements using 
-    > `py -m pip install -r requirements.txt`
+     `py -m pip install -r requirements.txt`
 * Run the app using 
-    > `py ./main.py`
+     `py ./main.py`
 * **DON'T CLOSE THE TERMINAL!**
 
 ***
