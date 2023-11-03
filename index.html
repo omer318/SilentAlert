@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>אזעקום מייד</title>
+  </head>
+  <body id="body">
+    <h1 id="alert">אזעקה</h1>
+  </body>
+
+  <style>
+    * {
+        
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+
+    }
+    #body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ff0000;
+      transition: all 0.2s;
+    }
+
+    #alert {
+        width: 50vw;
+        height: 50vh;
+        color: white;
+        transition: all 0.2s;
+        text-align: center;
+        font-family: system-ui;
+        font-size: 30vmin;
+    }
+  </style>
+  <script>
+    async function demo() {
+      var back = document.getElementById("body");
+      var text = document.getElementById("alert");
+      var onOff = false;
+      while (true) {
+        await new Promise((r) => setTimeout(r, 500));
+        back.style.backgroundColor = onOff ? "red" : "white";
+        onOff = !onOff;
+        text.style.color = onOff ? "red" : "white";
+      }
+    }
+
+    demo();
+  </script>
+</html>
