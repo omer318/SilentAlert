@@ -14,6 +14,7 @@ class AlertsController:
         Args:
             areas (list): the Areas to be alerted about
         """
+        print(f"Listening for alerts in {self.areas_of_interest}")
         tzevaadom.alerts_listener(self._handle_incoming_alert, self.areas_of_interest)
         
 
@@ -26,6 +27,6 @@ class AlertsController:
         """
         self.windows_controller.handle()
         for alert in list_alerts:
-            message = "New Alarm: " + \
+            message = "New Alert: " + \
                 alert["name_en"] + ". Zone: " + alert["zone_en"]
             print(message)

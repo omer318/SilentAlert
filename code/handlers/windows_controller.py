@@ -17,9 +17,12 @@ class WindowsController:
         Args:
             filename (string): the path of the file 
         """
+        
+        print("opens web window")
         webbrowser.open('file://' + os.path.realpath(filename))
 
     def _minimize_all(self):
         """Minimizes all of the other windows open on the PC
         """
+        print("minimizing all windows")
         press_and_release('windows+d')
