@@ -1,4 +1,2 @@
-webbrowser
-os
-tzevaadom
+requests
 keyboard

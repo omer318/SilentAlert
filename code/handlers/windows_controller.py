@@ -1,7 +1,8 @@
 import os
 import webbrowser
-from keyboard import press_and_release
+
 from config import ALERT_HTML_PATH
+from keyboard import press_and_release
 
 
 class WindowsController:
@@ -11,18 +12,20 @@ class WindowsController:
         self._minimize_all()
         self._open_web_window(ALERT_HTML_PATH)
 
-    def _open_web_window(self, filename):
+    @staticmethod
+    def _open_web_window(filename):
         """Opens a file in the default browser
 
         Args:
             filename (string): the path of the file 
         """
-        
+
         print("opens web window")
         webbrowser.open('file://' + os.path.realpath(filename))
 
-    def _minimize_all(self):
-        """Minimizes all of the other windows open on the PC
+    @staticmethod
+    def _minimize_all():
+        """Minimizes all the other windows open on the PC
         """
         print("minimizing all windows")
         press_and_release('windows+d')
